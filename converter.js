@@ -20,7 +20,9 @@ var numString = '';
 
 var isHundred = true ;
 
-var isDec = false ; 
+var isDec = false ;
+
+var isUnit = false;
 
 function scanDigit(arg){
 
@@ -32,6 +34,7 @@ function scanDigit(arg){
 			break;
 			
 		case 1:
+			(isUnit)? numString += 'Et-' : isDecimal = false;
 			numString += 'Un';
 			break;
 			
@@ -129,15 +132,13 @@ function scanDigit(arg){
 		
 		default:
 			scanDigit(decimal);
+			isUnit = true;
 			scanDigit(unit);
 
 			
 	}
 }
 
-
-
-//alert(hundred + ' ' + decimal + ' ' + unit);
 
 //Identify hundred
 
