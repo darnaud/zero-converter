@@ -5,4 +5,8 @@ counterpart, that is what I will use for practice purposes.
 Thus if the user enters the number " 41" (fourty one), the script should return
 "quarante-et-un".
 
+EDIT: At this point (3/10/15), The program does what it it supposed to do, but the code may need polishing
+
+	I plan on adding more comments to the source code and removing the unnecessary hyphens at the end of the outputs.
+
 Note: it will only accept numbers ranging from 0 to 999.

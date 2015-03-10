@@ -1,11 +1,6 @@
-
-
-
-
-
 do {
 var choice = parseInt(prompt('Entrez un nombre entre 0 et 999: '));
-} while ( !choice)
+} while ( 1000 < choice && choice <0)
 
 
 var unit = (choice % 10); 
@@ -20,9 +15,7 @@ var numString = '';
 
 var isHundred = true ;
 
-var isDec = false ;
-
-var isUnit = false;
+var isDec = false ; 
 
 function scanDigit(arg){
 
@@ -34,8 +27,7 @@ function scanDigit(arg){
 			break;
 			
 		case 1:
-			(isUnit)? numString += 'Et-' : isDecimal = false;
-			numString += 'Un';
+			numString += 'Un-';
 			break;
 			
 		case 2:
@@ -75,27 +67,27 @@ function scanDigit(arg){
 			break;
 
 		case 11:
-			numString += 'Onze';
+			numString += 'Onze-';
 			break;
 
 		case 12:
-			numString += 'Douze';
+			numString += 'Douze-';
 			break;
 
 		case 13:
-			numString += 'Treize';
+			numString += 'Treize-';
 			break;
 
 		case 14:
-			numString += 'Quatorze';
+			numString += 'Quatorze-';
 			break;
 
 		case 15:
-			numString += 'Quinze';
+			numString += 'Quinze-';
 			break;
 
 		case 16:
-			numString += 'Seize';
+			numString += 'Seize-';
 			break;
 
 		case 20:
@@ -120,6 +112,30 @@ function scanDigit(arg){
 
 		case 70:
 			numString += 'Soixante-Dix-';
+			break
+
+		case 71:
+			numString += 'Soixante-Onze-';
+			break;
+
+		case 72:
+			numString += 'Soixante-Douze-';
+			break;
+
+		case 73:
+			numString += 'Soixante-Treize-';
+			break;
+
+		case 74:
+			numString += 'Soixante-Quatorze-';
+			break;
+
+		case 75:
+			numString += 'Soixante-Quinze-';
+			break;
+
+		case 76:
+			numString += 'Soixante-Seize-';
 			break;
 
 		case 80:
@@ -129,16 +145,42 @@ function scanDigit(arg){
 		case 90:
 			numString += 'Quatre-Vingt-Dix-';
 			break;
+
+		case 91:
+			numString += 'Quatre-Vingt-Onze-';
+			break;
+
+		case 92:
+			numString += 'Quatre-Vingt-Douze';
+			break;
+
+		case 93:
+			numString += 'Quatre-Vingt-Treize-';
+			break;
+
+		case 94:
+			numString += 'Quatre-Vingt-Quatorze-';
+			break;
+
+		case 95:
+			numString += 'Quatre-Vingt-Quinze-';
+			break;
+
+		case 96:
+			numString += 'Quatre-Vingt-Seize-';
+			break;
 		
 		default:
 			scanDigit(decimal);
-			isUnit = true;
 			scanDigit(unit);
 
 			
 	}
 }
 
+
+
+//alert(hundred + ' ' + decimal + ' ' + unit);
 
 //Identify hundred
 
@@ -162,28 +204,7 @@ isHundred = false;
 
 scanDigit(dcmUnit);
 
+
+
+
 alert(choice + ' : ' + numString);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
